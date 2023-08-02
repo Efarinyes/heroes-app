@@ -1,0 +1,26 @@
+<div class="flex flex-column">
+  <span class="text-lg mb-4">Ingressa</span>
+  <mat-form-field>
+    <mat-label>Nom</mat-label>
+    <input type="text" matInput placeholder="El teu nom">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Usuari</mat-label>
+    <input type="text" matInput placeholder="Nom Usuari">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Contrassenya</mat-label>
+    <input type="password" matInput placeholder="Contrassenya">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Confirma Contrasenya</mat-label>
+    <input type="password" matInput placeholder="Confirma Contrassenya">
+  </mat-form-field>
+  <button mat-button mat-flat-button color="primary">
+    <mat-icon>person_add_alt</mat-icon>
+    Crear compte
+  </button>
+  <div class="flex justify-content-end mt-5">
+    <a routerLink="/auth/login">Ingressa si ja tens compte</a>
+  </div>
+</div>

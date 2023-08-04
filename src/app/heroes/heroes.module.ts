@@ -11,6 +11,7 @@ import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { MaterialModule } from '../material/material.module';
 import { CardComponent } from './components/card/card.component';
 import { HeroImagePipe } from './pipes/hero-image.pipe';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 
 
 
@@ -23,6 +24,7 @@ import { HeroImagePipe } from './pipes/hero-image.pipe';
     SearchPageComponent,
     CardComponent,
     HeroImagePipe,
+    ConfirmDialogComponent,
 
   ],
   imports: [

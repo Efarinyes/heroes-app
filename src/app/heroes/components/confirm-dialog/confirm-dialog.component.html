@@ -1,0 +1,10 @@
+<h1 mat-dialog-title> Segur que vols eliminar a {{data.superhero}} ?</h1>
+<div mat-dialog-content>
+  <p>Aquesta acció no es pot desfer!!</p>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <span class="spacer"></span>
+  <button mat-button color="primary" (click)="onConfirm()" cdkFocusInitial>Ok</button>
+</div>

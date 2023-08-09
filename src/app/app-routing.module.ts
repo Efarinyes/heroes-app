@@ -2,14 +2,26 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Error404PageComponent } from './shared/pages/error404-page/error404-page.component';
 
+import {canActivateGuard, canMatchGuard } from './auth/guards/auth.guard'
+import { canActitavateGuardPublic, canMatchGuardPublic } from './auth/guards/public.guard';
+
+
+
 const routes: Routes = [
   {
     path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule),
+    loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule ),
+    canActivate: [ canActitavateGuardPublic],
+    canMatch: [ canMatchGuardPublic ]
   },
+
   {
     path: 'heroes',
-    loadChildren: () => import('./heroes/heroes.module').then( m => m.HeroesModule),
+    loadChildren: () =>
+      import('./heroes/heroes.module').then( m => m.HeroesModule),
+      canMatch: [canMatchGuard], // fixem la funció canMatch
+      canActivate: [canActivateGuard], // Fixem la funcio del canActivate
+
   },
   {
     path: '404',
